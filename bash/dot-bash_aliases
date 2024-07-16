@@ -1,6 +1,7 @@
 # General commands : 
 alias update="sudo apt update -y"
 alias upgrade="sudo apt upgrade -y"
+alias update="sudo pacman -Syu"
 alias pinger="ping -c 3 1.1.1.1"
 alias o="xdg-open"
 alias rf="rm -rf"
@@ -10,7 +11,7 @@ alias ss="sudo su"
 alias cl="clear"
 alias kill="killall"
 alias h="htop"
-	
+
 # ls commands : 
 alias sl="ls"
 alias lla="ls -alh"
@@ -19,7 +20,7 @@ alias ll="ls -lh"
 # Ptyhon commands : 
 alias python="python3"
 alias py="python3"
-	
+
 # git commands :
 alias g="git"
 alias gp="git push"
@@ -29,3 +30,5 @@ alias gcm="git commit -m"
 alias gs="git status"
 alias gss="git status -s"
 alias gi="git init"
+alias gl="git log"
+alias gll="git log --oneline"
