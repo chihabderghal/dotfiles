@@ -28,7 +28,7 @@ default_floating_border pixel 1
 for_window [class="^Xfce4-appfinder$"] floating enable 
 for_window [class="^copyq$"] floating enable
 for_window [class="^Mousepad$"] floating enable
-for_window [class="^Pavucontrol$"] floating enable
+for_window [class="^pavucontrol$"] floating enable
 
 
 assign [class="^discord$"] 10
@@ -105,8 +105,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+equal move scratchpad
+
+bindsym $mod+equal scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
