@@ -1,37 +1,32 @@
-import = ["/home/chihab/.config/alacritty/themes/themes/tokyo-night.toml"]
 live_config_reload = true
-
-[cursor]
-unfocused_hollow = true
-vi_mode_style = "Block"
-
-[cursor.style]
-blinking = "Off"
-shape = "Block"
-
-[window]
-title = "Alacritty"
-
-[window.padding]
-x = 5
-y = 5
+import = ["~/.config/alacritty/themes/tokyo-night.toml"]
 
 [env]
-EDITOR = "/usr/bin/nvim"
 TERM = "xterm-256color"
 
 [shell]
 program = "/bin/bash"
 
+[window]
+title = "Alacritty"
+
 [scrolling]
 history = 10000
 
-[shell.class]
-general = "Alacritty"
-instance = "Alacritty"
+[window.padding]
+x = 5
+y = 5
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
 
 [font]
 size = 14
+
+[font.normal]
+family = "UbuntuMono Nerd Font Mono"
+style = "Regular"
 
 [font.bold]
 family = "UbuntuMono Nerd Font Mono"
@@ -45,9 +40,14 @@ style = "Bold Italic"
 family = "UbuntuMono Nerd Font Mono"
 style = "Italic"
 
-[font.normal]
-family = "UbuntuMono Nerd Font Mono"
-style = "Regular"
+[font.offset]
+x = 1
+y = 1
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
 action = "Copy"
@@ -55,8 +55,23 @@ key = "C"
 mods = "Control|Shift"
 
 [[keyboard.bindings]]
-action = "Paste"
-key = "V"
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Back"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "J"
 mods = "Control|Shift"
 
 [[keyboard.bindings]]
@@ -77,20 +92,4 @@ mods = "Alt"
 [[keyboard.bindings]]
 action = "ScrollToBottom"
 key = "L"
-mods = "Alt|Shift"
-
-[[keyboard.bindings]]
-action = "ResetFontSize"
-key = "Back"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "IncreaseFontSize"
-key = "K"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "DecreaseFontSize"
-key = "J"
-mods = "Control|Shift"
-
+mods = "Alt"
