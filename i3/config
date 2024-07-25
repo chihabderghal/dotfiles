@@ -29,7 +29,7 @@ for_window [class="^Xfce4-appfinder$"] floating enable
 for_window [class="^copyq$"] floating enable
 for_window [class="^Mousepad$"] floating enable
 for_window [class="^pavucontrol$"] floating enable
-
+for_window [class="^Blueman-manager$"] floating enable
 
 assign [class="^discord$"] 10
 assign [class="^Inkscape$"] 7
