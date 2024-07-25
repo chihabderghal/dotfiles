@@ -16,7 +16,7 @@ set $terminal alacritty
 bindsym $mod+Shift+d exec $appfinder
 bindsym $mod+Shift+Return exec $terminal
 bindsym $mod+b exec $browserDefault
-bindsym $mod+Shift+b exec $browserDefault
+bindsym $mod+Shift+b exec $browserPrivate
 bindsym $mod+p exec copyq toggle
 bindsym $mod+y exec scrot  
 bindsym $mod+Shift+y   --release exec scrot -s 
