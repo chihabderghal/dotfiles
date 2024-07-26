@@ -18,6 +18,5 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 PATH=$PATH:"$GOBIN"
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+export PATH
+export PS1
