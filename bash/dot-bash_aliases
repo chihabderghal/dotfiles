@@ -12,6 +12,8 @@ alias ss="sudo su"
 alias cl="clear"
 alias kill="killall"
 alias h="htop"
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
 # ls commands : 
 alias sl="ls"
