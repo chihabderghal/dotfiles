@@ -1,4 +1,4 @@
-# General commands : 
+# General
 alias update="sudo apt update -y"
 alias upgrade="sudo apt upgrade -y"
 alias update="sudo pacman -Syu"
@@ -7,24 +7,29 @@ alias o="xdg-open"
 alias rf="rm -rf"
 alias it="exit"
 alias ff="fastfetch" 
-alias of="onefetch"
 alias ss="sudo su" 
 alias cl="clear"
 alias kill="killall"
 alias h="htop"
+alias b="bash"
+
+# ls
+alias sl="ls"
+alias l="ls -lh"
+alias ll="ls -alh"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ls commands : 
-alias sl="ls"
-alias lla="ls -alh"
-alias ll="ls -lh"
-
-# Ptyhon commands : 
+# Ptyhon
 alias python="python3"
 alias py="python3"
 
-# git commands :
+#Edirot Commands: 
+alias e="nvim"
+alias n="nvim"
+alias vim="nvim"
+
+# Git 
 alias g="git"
 alias gp="git push"
 alias ga="git add"
@@ -35,3 +40,16 @@ alias gss="git status -s"
 alias gi="git init"
 alias gl="git log"
 alias gll="git log --oneline"
+
+# Docker
+alias d="docker"
+alias dc="docker-compose"
+
+# Tmux 
+alias t="tmux"
+alias ta="tmux a"
+alias tns="tmux new-session -s"
+alias tat="tmux attach -t"
+alias tls="tmux list-sessions"
+alias tks="tmux kill-session -t"
+alias tkserver="tmux kill-server"
