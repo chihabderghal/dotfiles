@@ -11,20 +11,34 @@ exec --no-startup-id copyq # Start the clipboard manager
 exec --no-startup-id nm-applet # Start the network manager applet
 
 # Define keybindings for applications
-set $appfinder xfce4-appfinder # Application launcher
-set $browserDefault firefox # Default web browser
-set $browserPrivate firefox --private-window # Private browsing mode for web browser
-set $terminal alacritty # Default terminal emulator
+#
+# Application launcher
+set $appfinder xfce4-appfinder 
+# Default web browser
+set $browserDefault google-chrome-stable
+# Private browsing mode for web browser
+set $browserPrivate google-chrome-stable --incognito
+# Default terminal emulator
+set $terminal alacritty
 
 # Keybindings for launching applications
-bindsym $mod+Shift+d exec $appfinder # Launch the application finder
-bindsym $mod+Shift+Return exec $terminal # Open a new terminal window
-bindsym $mod+b exec $browserDefault # Open the default web browser
-bindsym $mod+Shift+b exec $browserPrivate # Open the web browser in private mode
-bindsym $mod+p exec copyq toggle # Toggle the clipboard manager
-bindsym $mod+y exec scrot # Take a screenshot
-bindsym $mod+Shift+y --release exec scrot -s # Take a screenshot with selection tool
-bindsym $mod+Control+l --release exec i3lock # Lock the screen
+#
+# Launch the application finder
+bindsym $mod+Shift+d exec $appfinder 
+# Open a new terminal window
+bindsym $mod+Shift+Return exec $terminal 
+# Open the default web browser
+bindsym $mod+b exec $browserDefault 
+# Open the web browser in private mode
+bindsym $mod+Shift+b exec $browserPrivate 
+# Toggle the clipboard manager
+bindsym $mod+p exec copyq toggle 
+# Take a screenshot
+bindsym $mod+y exec scrot 
+# Take a screenshot with selection tool
+bindsym $mod+Shift+y --release exec scrot -s 
+# Lock the screen
+bindsym $mod+Control+l --release exec i3lock 
 
 # Configure window borders
 # 
