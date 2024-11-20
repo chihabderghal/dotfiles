@@ -6,7 +6,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\[\e[1;31m\]\u\[\e[0;0m\]\[\e[0;33m\]@\[\e[0;36m\]\h\[\e[0;0m\]\[\e[0;33m\]#\[\e[0;0m\]\t>\W\[\e[0;32m\]$\[\e[0;0m\] '
+PS1='\[\e[1;31m\]\u\[\e[0;0m\]\[\e[0;33m\]@\[\e[0;36m\]\h\[\e[0;0m\]\[\e[0;33m\]#\[\e[0;0m\]\t>\W\[\e[0;32m\]$(__git_ps1 "(%s)")\[\e[0;0m\]$ '
 
 # Load .bash_aliases
 test -f "$HOME/.bash_aliases" && source "$HOME/.bash_aliases"
@@ -14,15 +14,23 @@ test -f "$HOME/.bash_aliases" && source "$HOME/.bash_aliases"
 # Editor
 export EDITOR='nvim'
 
+# Better colors
+eval $(dircolors -b)
+
 # Go
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 PATH=$PATH:"$GOBIN"
 
 BASH_COMPLETION_DIR="/usr/share/bash-completion/completions/"
-[[ -d $BASH_COMPLETION_DIR ]] && \
-    source $BASH_COMPLETION_DIR/git && \
-    source $BASH_COMPLETION_DIR/docker  
+[[ -d $BASH_COMPLETION_DIR ]] &&
+    source $BASH_COMPLETION_DIR/git &&
+    source $BASH_COMPLETION_DIR/docker
+
+CUSTOM_BASH_COMPLETION_DIR="$HOME/.config/bash-completion/"
+
+[[ -d $CUSTOM_BASH_COMPLETION_DIR ]] &&
+    source $CUSTOM_BASH_COMPLETION_DIR/git-prompt
 
 export PATH
 export PS1
