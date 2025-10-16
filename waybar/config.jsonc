@@ -7,12 +7,10 @@
 
   "modules-right": [
     "pulseaudio",
-    "custom/uptime",
     "battery",
     "network",
     "cpu",
     "memory",
-    "custom/docker",
     "tray",
     "custom/power"
   ],
@@ -30,23 +28,14 @@
     "format": "{name}: {icon}",
     "format-icons": {
       "active": "",
-      "default": ""
-    }
+      "default": "",
+      "urgent": ""
+    },
   },
 
   "tray": {
     "icon-size": 16,
     "spacing": 10
-  },
-
-  "custom/music": {
-    "format": "  {}",
-    "escape": true,
-    "interval": 5,
-    "tooltip": false,
-    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
-    "on-click": "playerctl play-pause",
-    "max-length": 50
   },
 
   "clock": {
@@ -88,20 +77,4 @@
     "on-click": "wlogout &",
     "format": "⏻"
   },
-
-  "custom/docker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": 10,
-    "exec": "$(pwd)/scripts/docker-stats/docker-stats",
-    "tooltip": true
-  },
-
-  "custom/weather": {
-    "format": "{}",
-    "tooltip": true,
-    "interval": 1800,
-    "exec": "$(pwd)/scripts/weather-stats/weather-stats",
-    "return-type": "json"
-  }
 }
