@@ -16,12 +16,16 @@
   ],
 
   "battery": {
-    "bat": "CMB1",
-    "format": "{status} {capacity}% {time}",
-    "path": "/sys/class/power_supply/CMB1",
-    "format-charging": "⚡ {capacity}% ({time})",
-    "format-discharging": "🔋 {capacity}% ({time})",
-    "format-full": "🔌 {capacity}%"
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
   "hyprland/workspaces": {
